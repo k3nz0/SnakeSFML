@@ -4,9 +4,10 @@
 
 Game::Game()
 {
-	if(!mTexture1.loadFromFile("images/swhite.png")){
+	/*if(!mTexture1.loadFromFile("images/white.png")){
 		std::cout << "Error loading images/white.png" << std::endl;
-	}
+	}*/
+	
 	if(!mTexture2.loadFromFile("images/red.png")){
 		std::cout << "Error loading images/green.png" << std::endl;
 	}
