@@ -9,3 +9,9 @@ In order to compile this code, you'll need SFML installed. A quick way to do it 
   
 ### Compile
 ```g++ -c *.cpp *.hpp && g++ *.o -o snake -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio && ./snake ```
+
+or type :
+```make```
+
+Have fun :)! 
+
