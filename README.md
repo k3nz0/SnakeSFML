@@ -11,7 +11,7 @@ In order to compile this code, you'll need SFML installed. A quick way to do it 
 ```g++ -c *.cpp *.hpp && g++ *.o -o snake -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio && ./snake ```
 
 or type :
-```make```
+``` make ```
 
 Have fun :)! 
 
