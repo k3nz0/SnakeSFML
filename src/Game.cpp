@@ -1,18 +1,18 @@
-#include "Game.hpp"
-#include "config.hpp"
+#include "../include/Game.hpp"
+#include "../include/config.hpp"
 #include <iostream>
 
 Game::Game()
 {
-	/*if(!mTexture1.loadFromFile("images/white.png")){
+	/*if(!mTexture1.loadFromFile("resources/images/white.png")){
 		std::cout << "Error loading images/white.png" << std::endl;
 	}*/
 
-	if(!mTexture2.loadFromFile("images/red.png")){
-		std::cout << "Error loading images/green.png" << std::endl;
+	if(!mTexture2.loadFromFile("resources/images/red.png")){
+		std::cout << "Error loading resources/images/green.png" << std::endl;
 	}
-	if(!mTexture3.loadFromFile("images/green.png")){
-		std::cout << "Error loading images/green.png" << std::endl;
+	if(!mTexture3.loadFromFile("resources/images/green.png")){
+		std::cout << "Error loading resources/images/green.png" << std::endl;
 	}
 	
 	mSprite1.setTexture(mTexture1);
@@ -65,9 +65,9 @@ void Game::setPlaying(bool b){
 
 void Game::setLevel(int level){
 	if(level == 0)
-		mDelay = 0.2;
+		mDelay = 0.15;
 	else if(level == 1)
-		mDelay = 0.1;
+		mDelay = 0.10;
 	else if(level == 2)
 		mDelay = 0.05;
 	else

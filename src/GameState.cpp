@@ -1,4 +1,4 @@
-#include "GameState.hpp"
+#include "../include/GameState.hpp"
 #include <iostream>
 
 
@@ -7,7 +7,7 @@ GameState::GameState() :
 {
 	mWindow.create(sf::VideoMode(N * size, M * size), "Snake v0");
 
-	if(!mMusic.openFromFile("stereo.ogg")){
+	if(!mMusic.openFromFile("resources/stereo.ogg")){
 		std::cout << "Error loading stereo.ogg" << std::endl;
 	}
 	mMusic.setLoop(true);

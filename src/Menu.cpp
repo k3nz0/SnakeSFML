@@ -1,9 +1,9 @@
-#include "Menu.hpp"
+#include "../include/Menu.hpp"
 #include <iostream>
 
 Menu::Menu()
 {
-	if(!mFont.loadFromFile("arial.ttf")){
+	if(!mFont.loadFromFile("resources/arial.ttf")){
 		std::cout << "Error loading arial.ttf" << std::endl;
 	}
 	

@@ -1,9 +1,9 @@
-#include "Options.hpp"
+#include "../include/Options.hpp"
 #include <iostream>
 
 Options::Options()
 {
-	if(!mFont.loadFromFile("arial.ttf")){
+	if(!mFont.loadFromFile("resources/arial.ttf")){
 		std::cout << "Error loading arial.ttf" << std::endl;
 	}
 	
