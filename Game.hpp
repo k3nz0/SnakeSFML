@@ -8,7 +8,7 @@ struct Snake{
 	int x, y;
 };
 
-struct Fruct{
+struct Fruit{
 	int x, y;
 };
 
@@ -19,6 +19,7 @@ public:
 	void play(sf::RenderWindow &window);
 	bool getPlaying();
 	void setPlaying(bool b);
+	void setLevel(int level);
 private:
 	void processEvents(sf::RenderWindow &window);
 	void update();
@@ -33,14 +34,14 @@ private:
 	sf::Sprite mSprite2;
 	sf::Sprite mSprite3;
 
-	sf::Clock timeClock;
+	sf::Clock mTimeClock;
 
 	Snake mSnake[100];
-	Fruct mFruct;
+	Fruit mFruit;
 	int mDirection;
 	int mSnakeLength;
 		
-	float timer, delay;
+	float mTimer, mDelay;
 
 	bool mPlaying;
 };

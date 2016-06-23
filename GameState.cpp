@@ -1,10 +1,9 @@
 #include "GameState.hpp"
-
-#include "config.hpp"
 #include <iostream>
 
+
 GameState::GameState() :
-	mMusic(), mMenu(), mGame()
+	mMusic(), mMenu(), mGame(), mOptions()
 {
 	mWindow.create(sf::VideoMode(N * size, M * size), "Snake v0");
 
@@ -16,7 +15,9 @@ GameState::GameState() :
 
 	mGoMenu = true;
 	mGoGame = false;
+	mGoOptions = false;
 	mGoLost = false;
+	mLevel = 1;
 }
 
 
@@ -35,14 +36,30 @@ void GameState::run(){
 			}
 			else if(mMenu.getSelectedItem() == 1){
 				// Options
+				mGoMenu = false;
+				mGoOptions = true;
+				mMenu.setSelectedItem(-1);
 			}
 			else if(mMenu.getSelectedItem() == 2){
 				mMenu.setSelectedItem(-1);
 				mWindow.close();
 			}
 		}
+		else if(mGoOptions){
+			mOptions.render(mWindow);
+			mOptions.processEvents(mWindow);
+
+			if(mOptions.getSelectedItem() != -1){
+				mLevel = mOptions.getSelectedItem();
+				mOptions.setSelectedItem(-1);
+				mGoMenu = true;
+				mGoOptions = false;
+			}
+
+		}
 		else if(mGoGame){
 			mGame.setPlaying(true);
+			mGame.setLevel(mLevel);
 			mGame.play(mWindow);
 			mGoGame = mGame.getPlaying();
 			if(!mGoGame){

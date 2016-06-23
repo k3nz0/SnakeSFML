@@ -1,3 +1,7 @@
+#ifndef H_MENU
+#define H_MENU
+
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "config.hpp"
@@ -15,14 +19,14 @@ public:
 	int getSelectedItem() const;
 	void setSelectedItem(int item);
 	//~Menu();
-private:
-	void handlePlayerInput(sf::Keyboard::Key key);
-
-
-
+protected:
+	void handlePlayerInput(sf::Keyboard::Key key);	
 	int mSelectedItem;
 	int mCurrentItem;
+	
 	sf::Font mFont;
 	sf::Text mMenu[MAX_NUMBER_OF_ITEMS];
 
 };
+
+#endif

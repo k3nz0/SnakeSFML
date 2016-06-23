@@ -1,8 +1,10 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include "Menu.hpp"
-#include "Game.hpp"
+#include "config.hpp"
 
+#include "Menu.hpp"
+#include "Options.hpp"
+#include "Game.hpp"
 
 class GameState{
 public:
@@ -15,9 +17,13 @@ private:
 
 	Menu mMenu;
 	Game mGame;
+	Options mOptions;
+
+	int mLevel;
 
 	bool mGoMenu;
 	bool mGoGame;
+	bool mGoOptions;
 	bool mGoLost;
 
 

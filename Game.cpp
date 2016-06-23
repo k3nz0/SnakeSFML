@@ -7,7 +7,7 @@ Game::Game()
 	/*if(!mTexture1.loadFromFile("images/white.png")){
 		std::cout << "Error loading images/white.png" << std::endl;
 	}*/
-	
+
 	if(!mTexture2.loadFromFile("images/red.png")){
 		std::cout << "Error loading images/green.png" << std::endl;
 	}
@@ -21,7 +21,7 @@ Game::Game()
 	
 	reset();
 
-	timer = 0, delay = 0.1;
+	mTimer = 0, mDelay = 0.1;
 	mPlaying = true;
 
 }
@@ -36,24 +36,45 @@ void Game::reset(){
 	
 	srand(time(0));
 	
-	mFruct.x = rand() % N;
-	mFruct.y = rand() % M;
+	mFruit.x = rand() % N;
+	mFruit.y = rand() % M;
 
 }
 
 void Game::play(sf::RenderWindow &window){
-	float time = timeClock.getElapsedTime().asSeconds();
-	timeClock.restart();
-	timer += time;
+	float time = mTimeClock.getElapsedTime().asSeconds();
+	mTimeClock.restart();
+	mTimer += time;
 	processEvents(window);
 
-	if(timer > delay){
-		timer = 0;
+	if(mTimer > mDelay){
+		mTimer = 0;
 		update();
 		render(window);
 	}
 
 }
+
+bool Game::getPlaying(){
+	return mPlaying;
+}
+
+void Game::setPlaying(bool b){
+	mPlaying = b;
+}
+
+void Game::setLevel(int level){
+	if(level == 0)
+		mDelay = 0.2;
+	else if(level == 1)
+		mDelay = 0.1;
+	else if(level == 2)
+		mDelay = 0.05;
+	else
+		mDelay = 0.1;
+}
+
+// --- PRIVATE ---
 void Game::processEvents(sf::RenderWindow &window){
 	sf::Event event;
 
@@ -67,9 +88,9 @@ void Game::processEvents(sf::RenderWindow &window){
 }
 
 void Game::update(){
-	if(mSnake[0].x == mFruct.x && mSnake[0].y == mFruct.y){
-		mFruct.x = rand() % N;
-		mFruct.y = rand() % M;
+	if(mSnake[0].x == mFruit.x && mSnake[0].y == mFruit.y){
+		mFruit.x = rand() % N;
+		mFruit.y = rand() % M;
 		mSnakeLength++;
 	}
 	
@@ -129,7 +150,7 @@ void Game::render(sf::RenderWindow &window){
 		window.draw(mSprite2);
 	}
 	
-	mSprite3.setPosition(mFruct.x * size, mFruct.y * size);
+	mSprite3.setPosition(mFruit.x * size, mFruit.y * size);
 	window.draw(mSprite3);
 	window.display();
 }
@@ -145,11 +166,4 @@ void Game::handlePlayerInput(sf::Keyboard::Key key){
 		mDirection = 3;
 }
 
-bool Game::getPlaying(){
-	return mPlaying;
-}
-
-void Game::setPlaying(bool b){
-	mPlaying = b;
-}
 
