@@ -8,7 +8,7 @@ Will you be able to beat the Snake's hard mode ? (Beating hard mode, is actually
 
 Good luck & Have fun ! 
 
-![Play](resources/play.gif#center)
+<div style="text-align:center"><img src="resources/play.gif" /></div>
 
 ## Requirements
 In order to compile this code, you'll need SFML installed. A quick way to do it on linux (debian based): 
