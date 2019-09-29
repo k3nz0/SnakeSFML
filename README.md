@@ -10,14 +10,14 @@ Will you be able to beat the hard mode ? (Beating hard mode, is actually attaini
 
 Have fun :)! 
 
-![Play](resources/play.gif)
+<center>![Play](resources/play.gif)</center>
 
-### Requirements
+## Requirements
 In order to compile this code, you'll need SFML installed. A quick way to do it on linux (debian based): 
 
   ```sudo apt install libsfml-dev```
   
-### Install
+## Install
 
 Simply type : 
 ``` make ```
@@ -26,7 +26,7 @@ or if you're reckless and want to compile it by hand :
 ```g++ -c include/*.hpp src/*.cpp && g++ *.o -o snake -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio && ./snake ```
 
 
-### Perspectives
+## Perspectives
 
-* Add online scoreboard
-* Multiplayer Snake (multiple snakes race to eat the fruit !) 
+[] Add online scoreboard
+[] Multiplayer Snake (multiple snakes race to eat the fruit !) 
