@@ -10,8 +10,8 @@ Will you be able to beat the hard mode ? (Beating hard mode, is actually attaini
 
 Have fun :)! 
 
-![Play](resources/play.gif)
-<img align="center" src="resources/play.gif">
+<img align="right" src="resources/play.gif">
+
 ## Requirements
 In order to compile this code, you'll need SFML installed. A quick way to do it on linux (debian based): 
 
