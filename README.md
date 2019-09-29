@@ -1,10 +1,8 @@
 # SnakeSFML
 
-SnakeSFML is a Snake game developed in C++. 
+SnakeSFML is a Snake game developed in C++ and is available in 3 modes (Easy - Medium - Hard).
 
 SnakeSFML uses SFML which is a simple, fast, cross-platform multimedia API and provides access to windowing, graphics, audio and network.
-
-SnakeSFML is available in 3 modes (Easy - Medium - Hard).
 
 Will you be able to beat the hard mode ? (Beating hard mode, is actually attaining maximum snake length ;) ) 
 
