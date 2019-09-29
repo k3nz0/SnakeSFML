@@ -28,5 +28,5 @@ or if you're reckless and want to compile it by hand :
 
 ## Perspectives
 
-[] Add online scoreboard
-[] Multiplayer Snake (multiple snakes race to eat the fruit !) 
+* Add online scoreboard
+* Multiplayer Snake (multiple snakes race to eat the fruit !) 
