@@ -21,6 +21,7 @@ Simply type :
 ``` make ```
 
 or if you're reckless and want to compile it by hand :
+
 ```g++ -c include/*.hpp src/*.cpp && g++ *.o -o snake -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio && ./snake ```
 
 
