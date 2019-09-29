@@ -13,7 +13,7 @@ Good luck & Have fun !
 ## Requirements
 In order to compile this code, you'll need SFML installed. A quick way to do it on linux (debian based): 
 
-  ```sudo apt install libsfml-dev```
+`sudo apt install libsfml-dev`
   
 ## Install
 
